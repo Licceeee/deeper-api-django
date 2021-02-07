@@ -30,15 +30,12 @@ card game backend
 `poetry add graphene-django`
 
 ### add to installed apps in settings.py
-`
-INSTALLED_APPS = [
-    ... 
-    
+`INSTALLED_APPS = [
+
     "django.contrib.staticfiles", # Required for GraphiQL
     
     "graphene_django",
-]
-`
+]`
 
 ### add url in root urls.py
 `from django.urls import path
