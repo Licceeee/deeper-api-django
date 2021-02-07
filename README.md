@@ -31,17 +31,14 @@ card game backend
 
 ### add to installed apps in settings.py
 `INSTALLED_APPS = [
-
     "django.contrib.staticfiles", # Required for GraphiQL
-    
-    "graphene_django",
-]`
+    "graphene_django", ]`
 
 ### add url in root urls.py
-`from django.urls import path
-from graphene_django.views import GraphQLView
+`from django.urls import path`
+`from graphene_django.views import GraphQLView`
 
-urlpatterns = [
+`urlpatterns = [
     # ...
     path("graphql", GraphQLView.as_view(graphiql=True)),
 ]`
