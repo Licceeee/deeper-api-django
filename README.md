@@ -32,8 +32,10 @@ card game backend
 ### add to installed apps in settings.py
 `
 INSTALLED_APPS = [
-    ...
+    ... 
+    
     "django.contrib.staticfiles", # Required for GraphiQL
+    
     "graphene_django",
 ]
 `
