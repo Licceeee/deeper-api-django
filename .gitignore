@@ -1,0 +1,7 @@
+venv
+deeper/config/local_settings.py
+.vscode/
+deeper/**/migrations/*
+deeper/db.sqlite3
+*__pycache__/
+*.pyc

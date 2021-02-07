@@ -1,0 +1,32 @@
+from django.db import models
+
+
+class Timestamps(models.Model):
+    """timestamp model"""
+    created = models.DateTimeField(auto_now_add=True)
+    updated = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        abstract = True
+
+
+class Category(Timestamps):
+    """model for card categories:
+            family, friends, partners, etc
+    """
+    name = models.CharField(max_length=256, unique=True)
+    description = models.TextField(null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.name}"
+    
+
+class Question(Timestamps):
+    """model for card question:
+            how do you feel about etc...
+    """
+    content = models.CharField(max_length=256, unique=True)
+    categories = models.ManyToManyField(Category)
+
+    def __str__(self):
+        return f"{self.content}"
