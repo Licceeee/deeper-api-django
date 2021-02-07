@@ -20,6 +20,10 @@ class Category(Timestamps):
     def __str__(self):
         return f"{self.name}"
     
+    def get_nr_questions(self):
+        return self.question_set.count()
+    get_nr_questions.short_description = "# Questions"
+    
 
 class Question(Timestamps):
     """model for card question:
@@ -30,3 +34,8 @@ class Question(Timestamps):
 
     def __str__(self):
         return f"{self.content}"
+    
+    def get_categories(self):
+        return ", ".join([
+            category.name for category in self.categories.all()])
+    get_categories.short_description = "Categories"
