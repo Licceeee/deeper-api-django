@@ -50,11 +50,10 @@ urlpatterns = [
 ]`
 
 ### define the schema location for Graphene in the settings.py 
-`
-GRAPHENE = {
+`GRAPHENE = {
     "SCHEMA": "django_root.schema.schema"
-}
-`
+}`
+
 
 
 
