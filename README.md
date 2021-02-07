@@ -29,25 +29,6 @@ card game backend
 ### install graphene 
 `poetry add graphene-django`
 
-### add to installed apps in settings.py
-`INSTALLED_APPS = [
-    "django.contrib.staticfiles", # Required for GraphiQL
-    "graphene_django", ]`
-
-### add url in root urls.py
-`from django.urls import path`
-`from graphene_django.views import GraphQLView`
-
-`urlpatterns = [
-    # ...
-    path("graphql", GraphQLView.as_view(graphiql=True)),
-]`
-
-### define the schema location for Graphene in the settings.py 
-`GRAPHENE = {
-    "SCHEMA": "django_root.schema.schema"
-}`
-
 
 
 
