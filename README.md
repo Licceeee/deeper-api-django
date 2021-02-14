@@ -26,9 +26,6 @@ card game backend
 ### create superuser
 `python manage.py createsuperuser`
 
-### install graphene 
-`poetry add graphene-django`
-
 
 
 
