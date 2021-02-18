@@ -5,3 +5,4 @@ deeper/**/migrations/*
 deeper/db.sqlite3
 *__pycache__/
 *.pyc
+deeper/static
