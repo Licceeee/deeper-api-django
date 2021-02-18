@@ -34,4 +34,9 @@ a {
 a:hover {
   color: #295563;
 }
+
+.spacing {
+  padding: 1%;
+  margin: 3%;
+}
 /*# sourceMappingURL=style.css.map */

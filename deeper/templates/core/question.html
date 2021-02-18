@@ -1,0 +1,21 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+    <h2>{{ category }}</h2>
+    <h1>Question</h1>
+
+    <p class="spacing">{{ question }}</p>
+
+    <a href="{% url 'index' %}" >
+        <button class="spacing">Home</button>
+    </a>
+
+
+    <button class="spacing">
+        <a href="{% url 'question' category.id %}">
+            Next
+        </a>
+    </button>
+
+{% endblock %}

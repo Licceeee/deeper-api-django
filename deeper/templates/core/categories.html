@@ -1,0 +1,10 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
+
+    <h1>Categories</h1>
+    {% for category in object_list %}
+        <a href="{% url 'question' category.id %}" class="spacing">{{ category }}</a>
+    {% endfor %}
+
+{% endblock %}

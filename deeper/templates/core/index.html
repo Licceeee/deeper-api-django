@@ -1,13 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-{% load static %} {% include 'core/_partials/head.html' %}
+{% extends 'core/base.html' %}
+{% load static %}
+{% block content %}
 
+    <h1>Frontend placeholder</h1>
 
-<body>
-    <div class="main">
-        <h1>Frontend placeholder</h1>
-        <a href="{% url 'admin:index' %}"><strong>ADMIN PANEL</strong> 
-    </div>
-</body>
+    <a href="{% url 'admin:index' %}" class="spacing"><strong>ADMIN PANEL ></strong> </a>
 
-</html>
+    <br />
+    
+    <button class="spacing">
+        <a href="{% url 'categories' %}">
+            Categories
+        </a>
+    </button>
+    
+{% endblock %}

@@ -14,3 +14,4 @@ class QuestionAdmin(admin.ModelAdmin):
     search_fields = ['content']
     list_display = ('content', 'get_categories', 'created')
     readonly_fields = ('created', 'updated')
+    list_filter = ('categories__name',)
