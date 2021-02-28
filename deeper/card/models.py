@@ -18,7 +18,8 @@ class Category(Timestamps):
     description = models.TextField(null=True, blank=True)
     icon_web = models.CharField(max_length=50, default="fas heart")
     icon_mobile = models.CharField(max_length=50, default="heart")
-    icon_package_name_mobile = models.CharField(max_length=90, default="heart")
+    icon_package_name_mobile = models.CharField(max_length=90,
+                                                default="AntDesign")
 
     def __str__(self):
         return f"{self.name}"

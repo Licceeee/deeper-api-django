@@ -6,7 +6,7 @@ from .models import Category, Question
 class CategoryAdmin(admin.ModelAdmin):
     search_fields = ['name']
     list_display = ('name', 'description', 'icon_web', 'icon_mobile',
-                    'get_nr_questions', 'created')
+                    'icon_package_name_mobile', 'get_nr_questions', 'created')
     readonly_fields = ('created', 'updated')
 
 
