@@ -16,14 +16,16 @@ class Category(Timestamps):
     """
     name = models.CharField(max_length=256, unique=True)
     description = models.TextField(null=True, blank=True)
+    icon_web = models.CharField(max_length=50, default="fas heart")
+    icon_mobile = models.CharField(max_length=50, default="heart")
 
     def __str__(self):
         return f"{self.name}"
-    
+
     def get_nr_questions(self):
         return self.question_set.count()
     get_nr_questions.short_description = "# Questions"
-    
+
 
 class Question(Timestamps):
     """model for card question:

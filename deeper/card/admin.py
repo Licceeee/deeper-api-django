@@ -1,11 +1,12 @@
-from django.contrib import admin
+from django.contrib import admin  # NOQA
 from .models import Category, Question
 
 
 @admin.register(Category)
 class CategoryAdmin(admin.ModelAdmin):
     search_fields = ['name']
-    list_display = ('name', 'description', 'get_nr_questions', 'created')
+    list_display = ('name', 'description', 'icon_web', 'icon_mobile',
+                    'get_nr_questions', 'created')
     readonly_fields = ('created', 'updated')
 
 
