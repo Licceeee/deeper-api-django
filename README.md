@@ -1,4 +1,4 @@
-# deeper-django
+# deeper-api-django
 card game backend
 
 ## Project Set up
