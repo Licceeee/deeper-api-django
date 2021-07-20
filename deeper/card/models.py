@@ -16,7 +16,7 @@ class Category(Timestamps):
     """
     name = models.CharField(max_length=256, unique=True)
     description = models.TextField(null=True, blank=True)
-    icon_web = models.CharField(max_length=50, default="fas heart")
+    icon_web = models.CharField(max_length=50, default="fas fa-heart")
     icon_mobile = models.CharField(max_length=50, default="heart")
     icon_package_name_mobile = models.CharField(max_length=90,
                                                 default="AntDesign")
