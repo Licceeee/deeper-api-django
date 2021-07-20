@@ -1,13 +1,13 @@
-# deeper-django
+# deeper-api-django
 card game backend
 
 ## Project Set up
 
 ### Clone
-`git clone https://github.com/Licceeee/deeper-django.git`
+`git clone https://github.com/Licceeee/deeper-api-django.git`
 
 ### virtualenv
-`cd deeper-django`
+`cd deeper-api-django`
 
 `virtualenv -p python3 venv`
 
@@ -25,7 +25,6 @@ card game backend
 
 ### create superuser
 `python manage.py createsuperuser`
-
 
 
 
