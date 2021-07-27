@@ -22,11 +22,16 @@ class Query(graphene.ObjectType):
     question_by_id = graphene.Field(QuestionNode, id=graphene.Int())
 
     def resolve_categories(self, info, **kwargs):
-        return Category.objects.all()
+        return Category.objects.filter(is_online=True)
 
     def resolve_category_by_id(self, info, id):
         # Querying a single Category
-        return Category.objects.get(pk=id)
+        category = Category.objects.get(pk=id)
+        if category.is_online:
+            return category
+        else:
+            random = Category.objects.filter(is_online=True)
+            return random[0]
 
     def resolve_questions(self, info, **kwargs):
         return Question.objects.all()
