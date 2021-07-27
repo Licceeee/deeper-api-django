@@ -26,12 +26,15 @@ class Query(graphene.ObjectType):
 
     def resolve_category_by_id(self, info, id):
         # Querying a single Category
-        category = Category.objects.get(pk=id)
-        if category.is_online:
+        def random():
+            return Category.objects.filter(is_online=True)[0]
+        try:
+            category = Category.objects.get(pk=id)
+            if not category.is_online:
+                return random()
             return category
-        else:
-            random = Category.objects.filter(is_online=True)
-            return random[0]
+        except Category.DoesNotExist:
+            return random()
 
     def resolve_questions(self, info, **kwargs):
         return Question.objects.all()
