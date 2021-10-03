@@ -13,6 +13,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 @admin.register(Question)
 class QuestionAdmin(admin.ModelAdmin):
+    autocomplete_fields = ['categories']
     search_fields = ['content']
     list_display = ('content', 'get_categories', 'created')
     readonly_fields = ('created', 'updated')
