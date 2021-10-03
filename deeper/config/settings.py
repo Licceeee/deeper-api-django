@@ -27,7 +27,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'graphene_django',
-    'core.apps.CoreConfig',
     'card.apps.CardConfig',
     'corsheaders',
 ]
