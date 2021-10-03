@@ -1,6 +1,6 @@
 #header {
   height: 50px;
-  background: #343A40;
+  background: #151B29;
   color: #9b5d5d;
 }
 
@@ -33,7 +33,7 @@ input[type=submit],
 input[type=button],
 .submit-row input,
 a.button {
-  background: #343A40;
+  background: #151B29;
   color: #fff;
 }
 
