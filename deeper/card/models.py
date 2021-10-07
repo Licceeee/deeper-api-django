@@ -21,6 +21,10 @@ class Category(Timestamps):
                                                 default="AntDesign")
     is_online = models.BooleanField(default=False)
 
+    class Meta:
+        verbose_name = _("Category")
+        verbose_name_plural = _("Categories")
+
     def __str__(self):
         return f"{self.name}"
 
