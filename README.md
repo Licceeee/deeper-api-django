@@ -20,7 +20,7 @@ card game backend
 `cd deeper`
 
 `python manage.py makemigrations`
-
+`python manage.py makemigrations card`
 `python manage.py migrate`
 
 ### create superuser
