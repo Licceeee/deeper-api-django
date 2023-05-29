@@ -22,8 +22,8 @@ class Category(Timestamps):
     is_online = models.BooleanField(default=False)
 
     class Meta:
-        verbose_name = _("Category")
-        verbose_name_plural = _("Categories")
+        verbose_name = "Category"
+        verbose_name_plural = "Categories"
 
     def __str__(self):
         return f"{self.name}"
